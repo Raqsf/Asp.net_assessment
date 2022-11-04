@@ -1,0 +1,22 @@
+﻿@{
+    ViewData["Title"] = "Vehicles";
+}
+@model List<Vehicles>
+
+<div class="text-center">
+    <h1 class="display-4">Vehicles</h1>
+    <button class="btn btn-primary">Add Vehicle</button>
+    <button class="btn btn-outline-primary">Update Vehicle</button>
+</div>
+<div class="d-flex justify-content-around">
+    @foreach (var vehicle in Model)
+    {
+        <div class="m-3">
+            <div><b>Brand: </b>@vehicle.Brand</div>
+            <div><b>Vin: </b>@vehicle.Vin</div>
+            <div><b>Color: </b>@vehicle.Color</div>
+            <div><b>Year: </b>@vehicle.Year</div>
+            <div><b>Owner: </b>@vehicle.OwnerId</div>
+        </div>
+    }
+</div>

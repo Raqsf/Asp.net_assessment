@@ -1,0 +1,24 @@
+﻿@{
+    ViewData["Title"] = "Claims";
+}
+
+@model List<Claims>
+
+<div class="text-center">
+    <h1 class="display-4">Claims</h1>
+
+    <button class="btn btn-primary">Add Claim</button>
+    <button class="btn btn-outline-primary">Update Claim</button>
+</div>
+<div class="d-flex justify-content-around">
+
+    @foreach (var claim in Model)
+    {
+        <div class="m-3">
+            <div><b>Description: </b>@claim.Description</div>
+            <div><b>Status: </b>@claim.Status</div>
+            <div><b>Date: </b>@claim.Date</div>
+            <div><b>Vehicle: </b>@claim.VehicleId</div>
+        </div>
+    }
+</div>
